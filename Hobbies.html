@@ -9,15 +9,116 @@
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <link href="https://fonts.googleapis.com/css2?family=Anton&family=Antonio:wght@200&display=swap" rel="stylesheet"> 
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    </head>
-    <div>
-        <img id ="Home" src="Images/alaskaadventure.jpg" alt="Jen at Denali National Park">
-    </div>
         
-    <header>
-        <h1>Jen King</h1>
-    </header>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+       
+    </head>
+<body>
+    
+     <!-- Slideshow container -->
+<div class="slideshow-container">
 
+  <!-- Full-width images with number and caption text -->
+  <div class="mySlides fade">
+    <div class="numbertext">1 / 8</div>
+    <img src="Images/alaskaadventure.jpg">
+    <div class="text">Jen at Denali National Park</div>
+  </div>
+
+  <div class="mySlides fade">
+    <div class="numbertext">2 / 8</div>
+    <img src="Images/alaskaadventure2.jpg">
+    <div class="text">Jen hiking Denali National Park</div>
+  </div>
+
+  <div class="mySlides fade">
+    <div class="numbertext">3 / 8</div>
+    <img src="Images/jenhikezion.jpg">
+    <div class="text">Jen hiking Zion</div>
+  </div>
+
+  <div class="mySlides fade">
+    <div class="numbertext">4 / 8</div>
+    <img src="Images/jeninlondon.jpg">
+    <div class="text">Jen in London</div>
+  </div>
+    
+  <div class="mySlides fade">
+    <div class="numbertext">5 / 8</div>
+    <img src="Images/jenkayak.jpg">
+    <div class="text">Jen kayaking</div>
+  </div>
+
+  <div class="mySlides fade">
+    <div class="numbertext">6 / 8</div>
+    <img src="Images/jeninlourve.JPG">
+    <div class="text">Jen at the Lourve</div>
+  </div>
+
+  <div class="mySlides fade">
+    <div class="numbertext">7 / 8</div>
+    <img src="Images/jeninnarrowscanyon.jpg">
+    <div class="text">Jen hiking the Narrows</div>
+  </div>
+
+    <div class="mySlides fade">
+      <div class="numbertext">8 / 8</div>
+      <img src="Images/grandcanyon.jpg">
+      <div class="text">Jen and the Grand Canyon</div>
+   </div>
+    
+    
+  <!-- Next and previous buttons -->
+  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+  <a class="next" onclick="plusSlides(1)">&#10095;</a>
+</div>
+<br>
+
+<!-- The dots/circles -->
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span>
+  <span class="dot" onclick="currentSlide(2)"></span>
+  <span class="dot" onclick="currentSlide(3)"></span>
+  <span class="dot" onclick="currentSlide(4)"></span>
+  <span class="dot" onclick="currentSlide(5)"></span>
+  <span class="dot" onclick="currentSlide(6)"></span>
+  <span class="dot" onclick="currentSlide(7)"></span>
+  <span class="dot" onclick="currentSlide(8)"></span>
+</div> 
+
+
+<script>
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+}
+</script>
+
+</body>
+    
+    
     <div id="navbar">
             
         <a href = "Home.html">Home</a>
@@ -25,14 +126,19 @@
         <a href = "Hobbies.html">Hobbies</a>
     </div>  
     
+        <body style ="background-color:#F8F8FF"></body>
+    
     <div id=blurb>
-        <p>
+        <p style="font-family:antonio">
         Traveling is Jen’s first love. After joining the USAF Jen has traveled all over the world as an Airborne Spanish Linguist. Following her time in the military Jen continued to travel and has spent significant time in Japan, England, Greece, and Costa Rica. A lover of art and history Jen utilizes her time in each city to absorb its museums and local cuisines. There isn’t anything she won’t try once .. right? You can find her in her spare time running her local outdoor group. 
         </p>
-        <a href="#" class="fa fa-facebook"></a>
-        <a href="#" class="fa fa-instagram"></a>
     </div>
-    
-<footer>
-</footer> 
+        <HR ALIGN= "LEFT" WIDTH="15%" COLOR="#2639EB" SIZE="2">
+        <HR ALIGN= "LEFT" WIDTH="20%" COLOR="#1540D4" SIZE="3">
+        <HR ALIGN= "LEFT" WIDTH="25%" COLOR="#010BFS" SIZE="4">
+ 
+        <a href="https://www.facebook.com/groups/238941176934315/" class="fa fa-facebook" target="_blank"></a>
+            
+<footer></footer> 
+            
 </html>
